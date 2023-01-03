@@ -70,9 +70,11 @@ module.exports = {
      network_id: "*",   
         },
             // Any network (default: none)
-     contracts_directory: './src/contracts',
-     contracts_build_directory: './src/abis',
+  
     },
+
+    contracts_directory: './src/contracts/',
+    contracts_build_directory: './src/abis',
 
    
     
