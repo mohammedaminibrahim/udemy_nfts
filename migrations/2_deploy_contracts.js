@@ -1,5 +1,6 @@
 const CryptoBirdz = artifacts.require("CryptoBirdz");
 
-module.export = function(deployer) {
+module.exports = function(deployer) {
     deployer.deploy(CryptoBirdz);
 }
+
