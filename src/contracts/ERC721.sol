@@ -16,6 +16,17 @@ contract ERC721 {
     // Mapping from owner to number of owned tokens
     mapping(address => uint) private _OwnedTokensAccount;
 
+    /// @notice Count all NFTs assigned to an owner
+    /// @dev NFTs assigned to the zero address are considered invalid, and this
+    ///  function throws for queries about the zero address.
+    /// @param _owner An address for whom to query the balance
+    /// @return The number of NFTs owned by `_owner`, possibly zero
+    function balanceOf(address owner) public view returns(uint256){
+
+        require(_owner != address(0), 'owner token address non-existence');
+        return _OwnedTokensAccount_[owner];
+    }
+
     // check if token id exist and it truthfulness
     function _exist(uint256 tokenId) internal view returns(bool){
         // set the address of nft to check the token owner
