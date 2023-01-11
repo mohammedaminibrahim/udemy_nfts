@@ -17,7 +17,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -30,7 +31,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"symbol\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/src/contracts/CryptoBirdz.sol\":\"CryptoBirdz\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/src/contracts/CryptoBirdz.sol\":{\"keccak256\":\"0x05fec269ab19e748faf4d3b4f9769a07c93cc634ab4745662dd556fdc443f8c5\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2bfe5bc64e876695ba92df89924cb1051c04bf8ca2246158ceca2e0238d4f214\",\"dweb:/ipfs/QmeMuCRYPQiU8V9pEfYLXDtvgSqdvLbxizqg7regs7cZUr\"]},\"project:/src/contracts/ERC721Connector.sol\":{\"keccak256\":\"0xa9f65f59e2b6ab4fe47e7e9ef83fc9379c1a367a1e7c926c374025e5c9513bb2\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://90f17e67d9b1ff527c97312289e8d8764227c4a63888a96786e1489cd8bc8aeb\",\"dweb:/ipfs/QmNXPfZpThLqN2ThCUGQQgRa7BbECi3UYDoYKoDvgDt55N\"]},\"project:/src/contracts/ERC721Metadata.sol\":{\"keccak256\":\"0x30bcee98094b5ce4c0cd937f779b5c08ebb0bb7c8f065234359b1744480c5835\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1be7e147bb42600da8bd258a3c563f863c92a93525327c8eed2ee8b14b047c8b\",\"dweb:/ipfs/QmbYtqRgECvhTFVZUzoZTQ1jGDxsMYhZbusvuLwwcSn59Q\"]}},\"version\":1}",
@@ -4320,12 +4322,13 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x670481d96814Fd064d823DEc4FBa06D424BA3c45",
-      "transactionHash": "0xe7d979b3c3bb5a6e2916f49625cef3866243ebd3a3c80ccea6ce76de1b8b33fd"
+      "address": "0x9978755B6CCBd311AC19ac8dd72B82Fa805FAe16",
+      "transactionHash": "0xcdbf8febbed2b901926559bb74561621f52f79666549e0428dc9d1d1303027b2"
     }
   },
   "schemaVersion": "3.4.11",
-  "updatedAt": "2023-01-11T18:36:34.540Z",
+  "updatedAt": "2023-01-11T18:43:27.312Z",
+  "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
     "methods": {},
