@@ -7,6 +7,8 @@ import './ERC721Connector.sol';
 contract CryptoBirdz is ERC721Connector{
     
 
-    constructor() {
+    constructor() ERC721Connector('CryptoBirdz', 'CRBZ') {
+        
+    }
         
 }

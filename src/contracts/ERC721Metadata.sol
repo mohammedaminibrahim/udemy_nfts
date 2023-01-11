@@ -11,11 +11,11 @@ contract ERC721Metadata {
         _symbol = symbolified;
     }
 
-    function name() external returns(string memory) {
+    function name() view external returns(string memory) {
         return _name;
     }
 
-    function symbol() external returns(string memory){
+    function symbol() view external returns(string memory){
         return _symbol;
     }
 }
