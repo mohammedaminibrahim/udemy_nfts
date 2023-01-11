@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-contract CryptoBirdz {
-    string public name;
-    string public symbol;
+//inmport ERC721 Connector
+import './ERC721Connector.sol';
+
+contract CryptoBirdz is ERC721Connector{
+    
 
     constructor() {
-        name = 'Kryptobird';
-        symbol = 'KBIRDZ';
-    }
+        
 }
