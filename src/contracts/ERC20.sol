@@ -4,6 +4,12 @@ pragma solidity ^0.8.17;
 
 contract ERC21 {
 
+    event Transfer(
+        address indexed from, 
+        address indexed to,
+        uint256 indexed tokenId
+    );
+
     // Mapping from token id to the owner
     mapping(uint => address) private = _tokenOwner;
 
@@ -29,5 +35,7 @@ contract ERC21 {
         // keep track of each address that is minting and adding 1 to it
         _OwnedTokensAccount[to] += 1; // _OwnedTokensAccount[to] = _OwnedTokensAccount[0] + 2
 
+        // emit the Transfer EVent
+        emit Transfer(address(0), to, tokenId);
     }
 }
