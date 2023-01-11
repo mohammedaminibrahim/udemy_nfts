@@ -2,7 +2,7 @@
 pragma solidity ^0.8.17;
 
 
-contract ERC21 {
+contract ERC721 {
 
     event Transfer(
         address indexed from, 

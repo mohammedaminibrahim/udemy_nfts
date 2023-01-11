@@ -12,13 +12,13 @@ contract CryptoBirdz is ERC721Connector{
 
     mapping(string => bool) _cryptoBirdsExist;
 
-    function mint(string memory _CryptoBird) {
+    function mint(string memory _CryptoBird) public {
 
         require(!_cryptoBirdsExist[_CryptoBird],
         'Error - Crypto Already Exsit');
 
        // deprecated uint _id = CryptoBirds.push($_CryptoBird);
-       uint _id = cryptoBirds.push(_CryptoBird);
+       cryptoBirds.push(_CryptoBird);
        uint _id = cryptoBirds.length - 1;
 
         _mint(msg.sender, _id);
