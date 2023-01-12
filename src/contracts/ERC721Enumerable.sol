@@ -1,16 +1,27 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
+import './ERC721.sol';
 
-interface ERC721Enumerable /* is ERC721 */ {
+
+interface ERC721Enumerable is ERC721  {
 
     uint256[] private _allTokens;
+
+    // mapping from tokenid to position in _alltokens array
+    mapping(uint256 => uint256) private _allTokensIdex;
+
+    // mapping from owner list of all tokens ids
+    mapping(address => uint256) private _ownedTokens;
+
+    //mapping from token id index of the owner token list
+    mapping(uint256 => uint256) private _ownedTokensIndex;
 
     /// @notice Count NFTs tracked by this contract
     /// @return A count of valid NFTs tracked by this contract, where each one of
     ///  them has an assigned and queryable owner not equal to the zero address
     function totalSupply() external view returns (uint256){
-        return _allTokens;
+        return _allTokens.length;
     }
 
     /// @notice Enumerate valid NFTs
@@ -28,4 +39,8 @@ interface ERC721Enumerable /* is ERC721 */ {
     /// @return The token identifier for the `_index`th NFT assigned to `_owner`,
     ///   (sort order not specified)
     function tokenOfOwnerByIndex(address _owner, uint256 _index) external view returns (uint256);
+
+    function _mint(address to, uint256 tokenId) internal override(ERC721) {
+        super._mint(to, tokenId);
+    } 
 }
