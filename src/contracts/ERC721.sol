@@ -35,6 +35,7 @@ contract ERC721 {
     /// @param _tokenId The identifier for an NFT
     /// @return The address of the owner of the NFT
     function ownerOf(uint256 _tokenId) external view returns (address){
+        require(owner != address(0), 'owner token address non-existence');
         address owner = _OwnedTokensAccount[_tokenId];
         return owner;
     }
