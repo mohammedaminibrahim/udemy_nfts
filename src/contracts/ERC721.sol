@@ -29,6 +29,15 @@ contract ERC721 {
     }
 
     // Information derived from ERC71 page
+    // @notice Find the owner of an NFT
+    /// @dev NFTs assigned to zero address are considered invalid, and queries
+    ///  about them do throw.
+    /// @param _tokenId The identifier for an NFT
+    /// @return The address of the owner of the NFT
+    function ownerOf(uint256 _tokenId) external view returns (address){
+        address owner = _OwnedTokensAccount[_tokenId];
+        return owner;
+    }
 
     // check if token id exist and it truthfulness
     function _exist(uint256 tokenId) internal view returns(bool){
