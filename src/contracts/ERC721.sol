@@ -17,26 +17,26 @@ contract ERC721 {
     mapping(address => uint) private _OwnedTokensAccount;
 
     // Information derived from ERC71 page
-    /// @notice Count all NFTs assigned to an owner
-    /// @dev NFTs assigned to the zero address are considered invalid, and this
-    ///  function throws for queries about the zero address.
-    /// @param _owner An address for whom to query the balance
-    /// @return The number of NFTs owned by `_owner`, possibly zero
+    // @notice Count all NFTs assigned to an owner
+    // @dev NFTs assigned to the zero address are considered invalid, and this
+    //  function throws for queries about the zero address.
+    // @param _owner An address for whom to query the balance
+    // @return The number of NFTs owned by `_owner`, possibly zero
     function balanceOf(address owner) public view returns(uint256){
 
-        require(_owner != address(0), 'owner token address non-existence');
-        return _OwnedTokensAccount_[owner];
+        require(owner != address(0), 'owner token address non-existence');
+        return _OwnedTokensAccount[owner];
     }
 
     // Information derived from ERC71 page
     // @notice Find the owner of an NFT
-    /// @dev NFTs assigned to zero address are considered invalid, and queries
-    ///  about them do throw.
-    /// @param _tokenId The identifier for an NFT
-    /// @return The address of the owner of the NFT
+    // @dev NFTs assigned to zero address are considered invalid, and queries
+    //  about them do throw.
+    // @param _tokenId The identifier for an NFT
+    // @return The address of the owner of the NFT
     function ownerOf(uint256 _tokenId) external view returns (address){
+         address owner = _tokenOwner[_tokenId];
         require(owner != address(0), 'owner token address non-existence');
-        address owner = _OwnedTokensAccount[_tokenId];
         return owner;
     }
 
